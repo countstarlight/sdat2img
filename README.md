@@ -26,7 +26,12 @@ This is a simple example on a Linux system:
 ~$ ./sdat2img.py system.transfer.list system.new.dat system.img
 ```
 
+## Decompress EXT4 (raw image) -> OUTPUT folder -> Compress EXT4 (raw image)
 
-
+Now we need to mount or ext4 raw image into an output folder so we can see apks/jars etc.
+```
+mkdir output
+sudo mount -t ext4 -o loop system.img output/
+```
 ## Info
 For more information about this binary, visit http://forum.xda-developers.com/android/software-hacking/how-to-conver-lollipop-dat-files-to-t2978952.
